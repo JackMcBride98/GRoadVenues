@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <ItemGroup>
-        <ProjectReference Include="..\JackTemplate.Api\JackTemplate.Api.csproj" />
+        <ProjectReference Include="..\GRoadVenues.Api\GRoadVenues.Api.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,11 +1,11 @@
 ---
-name: jacktemplate
+name: groadvenues-test
 services:
   db:
     image: postgres
-    container_name: jacktemplate-db
+    container_name: groadvenues-test-db
     restart: always
     environment:
       POSTGRES_PASSWORD: mysecretpassword
     volumes: [./init.sql:/docker-entrypoint-initdb.d/init.sql]
-    ports: [5433:5432]
+    ports: [5434:5432]

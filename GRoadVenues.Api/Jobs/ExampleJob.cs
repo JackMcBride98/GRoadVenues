@@ -1,8 +1,8 @@
-using JackTemplate.Api.Services;
+using GRoadVenues.Api.Services;
 using TickerQ.Utilities.Base;
 using TickerQ.Utilities.Interfaces;
 
-namespace JackTemplate.Api.Jobs;
+namespace GRoadVenues.Api.Jobs;
 
 public record ExampleJobPayload(string UserId);
 

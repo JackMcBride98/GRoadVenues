@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace JackTemplate.Api.Configuration;
+namespace GRoadVenues.Api.Configuration;
 
 public class ExampleOptions
 {

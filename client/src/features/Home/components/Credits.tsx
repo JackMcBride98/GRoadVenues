@@ -15,7 +15,7 @@ export const Credits = () => {
         </a>
       </div>
       <a
-        href="https://github.com/JackMcBride98/JackTemplate"
+        href="https://github.com/JackMcBride98/GRoadVenues"
         rel="noopener noreferrer"
         target="_blank"
         className="mx-auto mb-4"

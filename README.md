@@ -1,6 +1,6 @@
 # Overview
 
-This is the JackTemplate project
+This is the GRoadVenues project
 
 Update this and write a brief description of the project
 
@@ -20,9 +20,9 @@ Tip: You can use the --exclusive flag to run Cake tasks without running the task
 
 `/client` contains the vite, typscript and React frontend
 
-`/JackTemplate.Api` contains the C# .NET, FastEndpoints, EFCore backend API, we have TickerQ installed for background jobs.
+`/GRoadVenues.Api` contains the C# .NET, FastEndpoints, EFCore backend API, we have TickerQ installed for background jobs.
 
-`/JackTemplate.Database` contains the DbUp console project and docker compose file for creating and migrating the database. 
+`/GRoadVenues.Database` contains the DbUp console project and docker compose file for creating and migrating the database. 
 This is used instead of EFCore migrations, to allow complete control of the generated SQL, allowing more flexibility in for example data migrations. 
 There are no down migrations as DbUp is opinionated against them. Although they could be added, there is a package to handle that. See DbUp documentation.
 
@@ -32,11 +32,11 @@ There are no down migrations as DbUp is opinionated against them. Although they 
 and use mock the results of Spotify API. These are setup as reccomened by FastEndpoints [documentation](https://fast-endpoints.com/docs/integration-unit-testing).
 
 # Renaming this template
-Use the Cake task to rename the project from `JackTemplate` to your own app name:
+Use the Cake task to rename the project from `GRoadVenues` to your own app name:
 
 `./cake RenameProject --name=MyApp`
 
-This renames the top-level project folders (`JackTemplate.Api`, `JackTemplate.Database`), updates the solution file, and replaces code/configuration references from `JackTemplate` to `MyApp` across the repository. It also updates the Docker Compose project and container names to the lowercase app name (for example, `myapp`).
+This renames the top-level project folders (`GRoadVenues.Api`, `GRoadVenues.Database`), updates the solution file, and replaces code/configuration references from `GRoadVenues` to `MyApp` across the repository. It also updates the Docker Compose project and container names to the lowercase app name (for example, `myapp`).
 
 # Running the app locally
 Ensure you have installed the necceessary deps in prerequisites. Build the solution and run `npm install` in the client folder
@@ -45,10 +45,10 @@ First create the local database by running `./cake CreateLocalDatabase`
 
 Then migrate the local database by running `./cake MigrateLocalDatabase`
 
-Within the `./JackTemplate.Api` folder
+Within the `./GRoadVenues.Api` folder
 Update `appsettings.Development.json` with any required secrets for local dev.
 
-Update the Database::ConnectionString in the appsettings to `"Host=localhost;Port=5433;Database=JackTemplate;Username=postgres;Password=mysecretpassword"`
+Update the Database::ConnectionString in the appsettings to `"Host=localhost;Port=5433;Database=GRoadVenues;Username=postgres;Password=mysecretpassword"`
 
 Then run the backend with `dotnet watch run` and go to `http://localhost:5030/`
 

@@ -1,10 +1,10 @@
 using System.Reflection;
 using System.Text.Json.Serialization;
 using FastEndpoints.OpenApi;
-using JackTemplate.Api.Configuration;
-using JackTemplate.Api.Database;
-using JackTemplate.Api.Jobs;
-using JackTemplate.Api.Services;
+using GRoadVenues.Api.Configuration;
+using GRoadVenues.Api.Database;
+using GRoadVenues.Api.Jobs;
+using GRoadVenues.Api.Services;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using TickerQ.DependencyInjection;
