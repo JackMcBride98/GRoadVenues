@@ -1,9 +1,9 @@
 ---
-name: jacktemplate
+name: groadvenues
 services:
   db:
     image: postgres
-    container_name: jacktemplate-db
+    container_name: groadvenues-db
     restart: always
     environment:
       POSTGRES_PASSWORD: mysecretpassword
