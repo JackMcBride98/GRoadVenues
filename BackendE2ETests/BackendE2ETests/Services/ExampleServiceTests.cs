@@ -1,4 +1,4 @@
-using JackTemplate.Api.Services;
+using GRoadVenues.Api.Services;
 
 namespace Tests.Services;
 

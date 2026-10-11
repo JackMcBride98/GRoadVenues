@@ -45,14 +45,14 @@ public class BuildContext : FrostingContext
         : base(context)
     {
         Delay = context.Arguments.HasArgument("delay");
-        DbUpProjectPath = "../JackTemplate.Database/JackTemplate.Database.csproj";
-        DbDirectoryPath = "../JackTemplate.Database";
+        DbUpProjectPath = "../GRoadVenues.Database/GRoadVenues.Database.csproj";
+        DbDirectoryPath = "../GRoadVenues.Database";
         LocalDbConnectionString =
-            "Host=localhost;Port=5433;Database=JackTemplate;Username=postgres;Password=mysecretpassword";
+            "Host=localhost;Port=5433;Database=GRoadVenues;Username=postgres;Password=mysecretpassword";
         LocalTestDbConnectionString =
-            "Host=localhost;Port=5434;Database=JackTemplateTest;Username=postgres;Password=mysecretpassword";
-        ApiProjectDirectoryPath = "../JackTemplate.Api";
-        ApiProjectPath = ApiProjectDirectoryPath + "/JackTemplate.Api.csproj";
+            "Host=localhost;Port=5434;Database=GRoadVenuesTest;Username=postgres;Password=mysecretpassword";
+        ApiProjectDirectoryPath = "../GRoadVenues.Api";
+        ApiProjectPath = ApiProjectDirectoryPath + "/GRoadVenues.Api.csproj";
         ClientDirectoryPath = "../client";
         BackendE2ETestsProjectPath = "../BackendE2ETests/BackendE2ETests/BackendE2ETests.csproj";
         BuildersProjectPath = "../Builders/Builders.csproj";
@@ -86,7 +86,7 @@ public sealed class RenameProjectTask : FrostingTask<BuildContext>
         while (rootDirectory != null)
         {
             if (
-                File.Exists(System.IO.Path.Combine(rootDirectory.FullName, "JackTemplate.slnx"))
+                File.Exists(System.IO.Path.Combine(rootDirectory.FullName, "GRoadVenues.slnx"))
                 && Directory.Exists(System.IO.Path.Combine(rootDirectory.FullName, "build"))
             )
             {
@@ -102,17 +102,17 @@ public sealed class RenameProjectTask : FrostingTask<BuildContext>
             throw new CakeException("Could not find the repository root for the rename task.");
         }
 
-        var oldProjectName = "JackTemplate";
+        var oldProjectName = "GRoadVenues";
         var dockerComposeProjectName = normalizedName.ToLowerInvariant();
 
         var renamedDirectories = new[]
         {
             (
-                System.IO.Path.Combine(repoRoot, "JackTemplate.Api"),
+                System.IO.Path.Combine(repoRoot, "GRoadVenues.Api"),
                 System.IO.Path.Combine(repoRoot, $"{normalizedName}.Api")
             ),
             (
-                System.IO.Path.Combine(repoRoot, "JackTemplate.Database"),
+                System.IO.Path.Combine(repoRoot, "GRoadVenues.Database"),
                 System.IO.Path.Combine(repoRoot, $"{normalizedName}.Database")
             ),
         };
@@ -125,7 +125,7 @@ public sealed class RenameProjectTask : FrostingTask<BuildContext>
             }
         }
 
-        var solutionSource = System.IO.Path.Combine(repoRoot, "JackTemplate.slnx");
+        var solutionSource = System.IO.Path.Combine(repoRoot, "GRoadVenues.slnx");
         var solutionDestination = System.IO.Path.Combine(repoRoot, $"{normalizedName}.slnx");
         if (File.Exists(solutionSource) && !File.Exists(solutionDestination))
         {
@@ -142,7 +142,7 @@ public sealed class RenameProjectTask : FrostingTask<BuildContext>
         {
             var legacyCsproj = System.IO.Path.Combine(
                 renamedApiDirectory,
-                "JackTemplate.Api.csproj"
+                "GRoadVenues.Api.csproj"
             );
             var newCsproj = System.IO.Path.Combine(
                 renamedApiDirectory,
@@ -158,7 +158,7 @@ public sealed class RenameProjectTask : FrostingTask<BuildContext>
         {
             var legacyCsproj = System.IO.Path.Combine(
                 renamedDatabaseDirectory,
-                "JackTemplate.Database.csproj"
+                "GRoadVenues.Database.csproj"
             );
             var newCsproj = System.IO.Path.Combine(
                 renamedDatabaseDirectory,
@@ -304,7 +304,7 @@ public sealed class FormatTask : FrostingTask<ICakeContext>
         );
 
         context.DotNetFormat(
-            "../JackTemplate.slnx",
+            "../GRoadVenues.slnx",
             new DotNetFormatSettings
             {
                 VerifyNoChanges = false,
@@ -325,7 +325,7 @@ public sealed class LintBackendTask : FrostingTask<BuildContext>
         );
 
         context.DotNetFormat(
-            "../JackTemplate.slnx",
+            "../GRoadVenues.slnx",
             new DotNetFormatSettings
             {
                 VerifyNoChanges = true,

@@ -1,4 +1,4 @@
-using JackTemplate.Api.Services;
+using GRoadVenues.Api.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection.Extensions;

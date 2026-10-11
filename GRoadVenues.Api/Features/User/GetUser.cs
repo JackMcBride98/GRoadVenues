@@ -1,10 +1,10 @@
-using JackTemplate.Api.Configuration;
-using JackTemplate.Api.Database;
-using JackTemplate.Api.Services;
+using GRoadVenues.Api.Configuration;
+using GRoadVenues.Api.Database;
+using GRoadVenues.Api.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace JackTemplate.Api.Features.User;
+namespace GRoadVenues.Api.Features.User;
 
 public class GetUser
 {

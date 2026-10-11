@@ -1,7 +1,7 @@
 <Solution>
     <Project Path="Builders/Builders.csproj" />
-    <Project Path="JackTemplate.Api/JackTemplate.Api.csproj" />
-    <Project Path="JackTemplate.Database/JackTemplate.Database.csproj" />
+    <Project Path="GRoadVenues.Api/GRoadVenues.Api.csproj" />
+    <Project Path="GRoadVenues.Database/GRoadVenues.Database.csproj" />
     <Folder Name="/infrastructure/">
         <File Path="infrastructure/.gitignore" />
     </Folder>

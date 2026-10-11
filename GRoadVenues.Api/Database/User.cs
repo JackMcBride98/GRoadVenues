@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using NodaTime;
 using NodaTime.Extensions;
 
-namespace JackTemplate.Api.Database;
+namespace GRoadVenues.Api.Database;
 
 public class User(string userId, string name)
 {

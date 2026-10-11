@@ -1,6 +1,6 @@
-using JackTemplate.Api.Database;
+using GRoadVenues.Api.Database;
 
-namespace JackTemplate.Api.Services;
+namespace GRoadVenues.Api.Services;
 
 public interface IExampleService
 {

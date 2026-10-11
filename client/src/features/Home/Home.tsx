@@ -7,7 +7,7 @@ export const Home = () => {
         Jack Template
       </h1>
       <p className="w-72 pb-5 md:w-80">
-        JackTemplate insert app description here
+        GRoadVenues insert app description here
       </p>
       <Credits />
     </div>
